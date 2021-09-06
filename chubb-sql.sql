@@ -22,7 +22,7 @@ INSERT INTO courses (id,courses_name,student_name) VALUES (1,"aws","Mayank"),(2,
 
 SELECT user_name,problem_solved FROM codekata; 
 SELECT user_name,COUNT(cmpany_name) FROM company_drives GROUP BY(user_name);
-SELECT students_activated_courses_name,courses_name,courses.student_name FROM students_activated_courses,courses WHERE courses.student_name="Mayank" 
+SELECT students_activated_courses_name,courses_name,courses.student_name FROM students_activated_courses,courses WHERE courses.student_name="Mayank" GROUP BY(courses_name);
 AND students_activated_courses.student_name = courses.student_name; 
 
 SELECT mentors_name FROM mentors;
