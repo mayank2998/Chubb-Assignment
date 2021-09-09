@@ -1,0 +1,47 @@
+db.topics.aggregate([
+  {
+    '$match': {
+      'month': 'october'
+    }
+  }, {
+    '$lookup': {
+      'from': 'tasks', 
+      'localField': 'month', 
+      'foreignField': 'taskMonth', 
+      'as': 'string'
+    }
+  }
+]
+)
+
+2-
+
+db.company_drives.find({
+    date: {
+        $gte: ISODate("2020-10-15T00:00:00.000Z"),
+        $lt: ISODate("2020-10-31T00:00:00.000Z")
+    }
+}
+)
+
+
+3-
+
+db.company_drives.find({appeared : true})
+
+4-
+
+db.codekata.find({},{noOfProblemSolved : 1,userName : 1,_id : 0})
+
+5-
+
+db.mentors.find({menteeCount : {$gt : 15}})
+
+6-
+
+db.attendance.find({$and : [{date: {
+        $gte: ISODate("2020-10-15T00:00:00.000Z"),
+        $lt: ISODate("2020-10-31T00:00:00.000Z")
+    }},{submitted : true},{absent : true}]}
+)
+
