@@ -1,0 +1,11 @@
+movies
+
+{"_id":{"$oid":"613f43ea878d7198361e3c4d"},"id":1,"name":"dunkirk","media":"video","genre":["war","action"],"roles":[{"$oid":"613f40e2878d7198361e3c4a"}],"reviews":[{"$oid":"613f422a878d7198361e3c4b"}]}
+
+user
+
+{"_id":{"$oid":"613f422a878d7198361e3c4b"},"id":1,"name":"charles","reviews":[{"movie_id":1,"review":"good"}]}
+
+artist
+
+{"_id":{"$oid":"613f40e2878d7198361e3c4a"},"id":1,"name":"harry Styles","role":["alex","tommy"]}
