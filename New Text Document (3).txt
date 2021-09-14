@@ -1,0 +1,83 @@
+artist- objid - ObjectId("613f40e2878d7198361e3c4a")
+
+user - objid - ObjectId("613f422a878d7198361e3c4b")
+
+db.movies.find({name:"dunkirk"},{_id;0,media:1});
+
+
+[
+  {
+    '$lookup': {
+      'from': 'user', 
+      'localField': 'reviews', 
+      'foreignField': '_id', 
+      'as': 'reviews'
+    }
+  }
+]
+
+
+[
+  {
+    '$match': {
+      'name': 'dunkirk'
+    }
+  }, {
+    '$lookup': {
+      'from': 'user', 
+      'localField': 'reviews', 
+      'foreignField': '_id', 
+      'as': 'review'
+    }
+  }
+]
+
+
+
+ db.movies.aggregate([
+...   {
+...     '$match': {
+...       'name': 'dunkirk'
+...     }
+...   }, {
+...     '$lookup': {
+...       'from': 'user',
+...       'localField': 'reviews',
+...       'foreignField': '_id',
+...       'as': 'review'
+...     }
+...   }
+... ]).pretty();
+
+db.movies.aggregate([
+    {
+        '$match': {
+            'name': 'dunkirk'
+        }
+    }, {
+        '$lookup': {
+            'from': 'artist', 
+            'localField': 'roles', 
+            'foreignField': '_id', 
+            'as': 'role'
+        }
+    }, {
+        '$unwind': {
+            'path': '$role'
+        }
+    }, {
+        '$project': {
+            'name': 1, 
+            'media': 1, 
+            'role.name': 1, 
+            'role.role': 1
+        }
+    }
+]).pretty();
+
+
+ db.user.find({name:"charles"},{"reviews.review" : 1});
+
+db.artist.find({skill:1});
+
+db.artist.find({},{role:1});
