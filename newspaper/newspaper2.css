@@ -1,0 +1,138 @@
+body{
+    margin-top : 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.menubar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.headlines{
+    border-style: ridge;
+    border-color: darkgrey;
+    border-right: 0px;
+    border-left: 0px;
+}
+.firstRow{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.firstColumn{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 2 ;
+    margin-right: 10px;
+    
+}
+.secondColumn{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1;
+    justify-content: center;
+    align-items: stretch;
+    margin-left: 10px;
+}
+.secondColumn > img{
+    flex-shrink: 0;
+    max-width: 100%;
+    height: auto;
+}
+.firstRowEmbededText{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.secondRowHeader{
+    border-style: ridge;
+    border-color: darkgrey;
+    border-right: 0px;
+    border-left: 0px;
+    margin-top: 10px;
+}
+.secondRow{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+}
+
+.columnOne{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 ;
+    margin-right: 10px;
+    
+}
+.columnTwo{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 2;
+    justify-content: center;
+    align-items: stretch;
+    margin-left: 10px;
+}
+.columnTwo > img{
+    flex-shrink: 0;
+    max-width: auto;
+    height: auto;
+}
+.thirdRowHeader{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.thirdRow{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  
+}
+.thirdRowcolumnOne{
+    display: flex;
+    flex-direction: column;
+    flex-flow: row wrap;
+    flex: 1;
+    margin-right: 10px;
+}
+.thirdRowcolumnTwo{
+    display: flex;
+    flex-direction: column;
+    flex-flow: row wrap;
+    flex: 1;
+    margin-right: 10px;
+}
+.thirdRowcolumnThree{
+    display: flex;
+    flex-direction: column;
+    flex-flow: row wrap;
+    flex: 1;
+}
+.thirdRowcolumnThree > img{
+    flex-shrink: 2;
+    max-width: 100%;
+    height: auto;
+}
+.embededText{
+    border-style: ridge;
+    border-color: darkgrey;
+    border-right: 0px;
+    border-left: 0px;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    text-align: center;
+    color: brown;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-style: ridge;
+    border-color: darkgrey;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+    margin-top: 20px;
+}

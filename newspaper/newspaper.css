@@ -1,0 +1,121 @@
+body{
+    margin-top : 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.menubar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.headlines{
+    border-style: ridge;
+    border-color: darkgrey;
+    border-right: 0px;
+    border-left: 0px;
+}
+.newspaperName{
+    font-size: larger;
+    text-align: center;
+}
+.firstRow{
+    display: flex;
+    flex-direction: row;
+}
+
+.firstColumn{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 ;
+    margin-right: 10px;
+    
+}
+.secondColumn{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 2;
+    justify-content: center;
+    align-items: stretch;
+    margin-left: 10px;
+}
+.secondColumn > img{
+    flex-shrink: 0;
+    min-width: 50%;
+    min-height: 50%
+}
+.secondRow{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  
+}
+.columnOne{
+    display: flex;
+    flex-direction: column;
+    flex-flow: row wrap;
+    flex: 1;
+    margin-right: 10px;
+}
+.columnOne > img{
+    flex-shrink: 2;
+    max-width: 100%;
+    height: auto;
+}
+.columnTwo{
+    display: flex;
+    flex-direction: column;
+    flex-flow: row wrap;
+    flex: 1;
+    margin-right: 10px;
+}
+.columnTwo > img{
+    flex-shrink: 2;
+    max-width: 100%;
+    height: auto;
+}
+.columnThree{
+    display: flex;
+    flex-direction: column;
+    flex-flow: row wrap;
+    flex: 1;
+}
+.columnThree > img{
+    flex-shrink: 2;
+    max-width: 100%;
+    height: auto;
+}
+
+.thirdRow{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  
+}
+.embededText{
+    border-style: ridge;
+    border-color: darkgrey;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    text-align: center;
+    color: brown;
+}
+h3{
+    margin: 0px;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-style: ridge;
+    border-color: darkgrey;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+    margin-top: 20px;
+}
