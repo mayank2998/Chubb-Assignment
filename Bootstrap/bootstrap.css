@@ -1,0 +1,26 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: whitesmoke;
+}
+.upperHalf{
+    background-color: #edbbcc;
+    margin: 0px;;
+}
+
+img{
+    max-width: 50%;
+    height: auto;
+   
+}
+.lowerHalf{
+    background-color: whitesmoke;
+    margin: 0px;;
+}
+.btn-danger{
+    background-color: salmon;
+}
+.styleFont{
+    color: salmon;
+}
+span.tab-space {padding-left:2em;}
