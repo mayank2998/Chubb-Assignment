@@ -1,0 +1,13 @@
+body{
+    background-color: black;
+    margin : 0px;
+}
+p{
+    background-color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    height: 70px;
+    width: 200px;
+}
