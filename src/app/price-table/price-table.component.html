@@ -1,0 +1,33 @@
+<!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
+
+        <section class="pricing py-5">
+          <div class="card mb-5 mb-lg-0">
+            <div class="card-body">
+              <h5 class="card-title text-muted text-uppercase text-center">{{myData.title}}</h5>
+              <h6 class="card-price text-center">{{myData.price}}<span class="period">/month</span></h6>
+              <hr>
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>{{myData.details.users}}</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>{{myData.details.storage}}</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>{{myData.details.publicProjects}}</li>
+                <li><span class="fa-li"><i class="fas fa-check"></i></span>{{myData.details.access}}</li>
+                <li class="text-muted" *ngIf="!myData.details.isprivateProjectsEnabled"><span class="fa-li"><i class="fas fa-times"></i></span>{{myData.details.privateProjects}}</li>
+                <li *ngIf="myData.details.isprivateProjectsEnabled"><span class="fa-li"><i class="fas fa-times"></i></span>{{myData.details.privateProjects}}</li>
+                <li class="text-muted" *ngIf="!myData.details.isphoneSupportEnabled"><span class="fa-li"><i class="fas fa-times"></i></span>{{myData.details.phoneSupport}}</li>
+                <li *ngIf="myData.details.isphoneSupportEnabled"><span class="fa-li"><i class="fas fa-times"></i></span>{{myData.details.phoneSupport}}</li>
+                <li class="text-muted" *ngIf="!myData.details.issubDomainEnabled"><span class="fa-li"><i class="fas fa-times"></i></span>{{myData.details.subDomain}}</li>
+                <li *ngIf="myData.details.issubDomainEnabled"><span class="fa-li"><i class="fas fa-times"></i></span>{{myData.details.subDomain}}</li>
+                <li class="text-muted" *ngIf="!myData.details.isstatusReportEnabled"><span class="fa-li"><i class="fas fa-times"></i></span>{{myData.details.statusReport}}</li>
+                <li *ngIf="myData.details.isstatusReportEnabled"><span class="fa-li"><i class="fas fa-times"></i></span>{{myData.details.statusReport}}</li>
+              </ul>
+              <div class="d-grid">
+                <a href="#" class="btn btn-primary text-uppercase">Button</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Plus Tier -->
+       
+       
+  
