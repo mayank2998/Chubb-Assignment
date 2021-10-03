@@ -1,0 +1,24 @@
+.containers{
+  background-color: #1ba858;
+}
+.btn-default {
+    color: white;
+    background-color: #c5cdd9;
+  
+  }
+.btn-change {
+
+  }
+  .task-completed {
+    text-decoration: line-through;
+    color: #c5cdd9;
+  }
+  .task-uncompleted {
+    text-decoration: none;
+  }
+  .disableButton{
+    background-color: #c5cdd9;
+    border-color: white;
+  }
+  
+ 

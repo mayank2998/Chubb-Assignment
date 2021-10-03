@@ -1,0 +1,31 @@
+<div class="container-fluid" [ngClass]="'containers'">
+  <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-body">
+          <div class="row d-flex flex-row justify-content-between">
+            
+              <input class="col-lg-8 col-sm-8" type="text" [(ngModel)]="textValue" />
+              <button *ngIf="textValue.length > 0" class="btn btn-success col-lg-3 col-sm-3" (click)="addDatatoCart(textValue)">ADD TASK</button>
+              <button *ngIf="textValue.length == 0" class="btn btn-success col-lg-3 col-sm-3" [ngClass]="'disableButton'">ADD TASK</button>
+              <hr>
+           
+          </div> 
+          <div class="card-text" *ngFor="let item of toDoItems;let i = index;">
+            <!-- <app-list [listItems]="item"></app-list> -->
+            <div class="row d-flex flex-row justify-content-between mt-1">
+              <p class="col-lg-8 col-sm-8"[ngClass]="[item.bntStyle]">{{item.title}}</p>
+              <button class="btn btn-success col-lg-3 col-sm-3" (click)="removeFromList(item)" [ngClass]="item.status ? 'btn-default' : 'btn-change'" >done</button>
+              <hr>
+            </div>
+           
+          </div>
+          <div class="row d-flex">
+            <button class="btn btn-success col-lg-4 col-sm-3 btn-lg" (click)="removeCompletedtask()">Clear completed task</button>
+          </div>
+         
+        </div>
+      </div>
+    </div> 
+  </div>
+</div>
