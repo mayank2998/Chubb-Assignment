@@ -1,0 +1,36 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+  
+      <!-- Icon -->
+      <div [ngClass]="'fadeIn first'">
+        <img src="assets/icon2.svg" id="icon" alt="User Icon" />
+        <span class="material-icons-outlined">
+            manage_accounts
+            </span>
+        <i class="fas fa-user-graduate"></i>
+      </div>
+    
+      <!-- Login Form -->
+      <form [formGroup]="userForm" (ngSubmit)="submitdata()">
+        <input [ngClass]="{ 
+          'has-error':userForm.controls.emailId.touched && userForm.controls.emailId.invalid,
+          'has-success' : userForm.controls.emailId.touched && userForm.controls.emailId.valid
+      }"
+        type="text"  placeholder="login" 
+        formControlName="emailId" class="form-control">
+        <input type="password"  [ngClass]="{ 
+          'has-passworderror':userForm.controls.password.touched && userForm.controls.password.invalid,
+          'has-passwordsuccess' : userForm.controls.password.touched && userForm.controls.password.valid
+      }"  placeholder="password"
+        formControlName="password" class="form-control">
+        <input type="submit" [ngClass]="'fadeIn fourth'" value="Log In" [disabled]="userForm.controls.password.invalid || userForm.controls.emailId.invalid">
+      </form>
+  
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a [ngClass]="'underlineHover'" routerLink="/register">Register</a>
+      </div>
+  
+    </div>
+  </div>

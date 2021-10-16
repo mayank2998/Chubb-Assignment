@@ -1,0 +1,45 @@
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">URL List</h1>
+    <a routerLink="/main/url-form" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+            class="fas fa-download fa-sm text-white-50"></i>Shorten Url</a>
+</div>
+
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h4 class="m-0 font-weight-bold text-primary">URL Table</h4>
+            </div>
+
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <colgroup>
+                            <col class="col-md-1">
+                            <col class="col-md-4">
+                            <col class="col-md-5">
+                            <col class="col-md-2">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th style="width:  8.33%">ID</th>
+                                <th style="width: 25%">ShortUrl</th>
+                                <th style="width: 50%">OriginalUrl</th>
+                                <th style="width: 16.66%">Clicks</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let url of urlList">
+                                <td style="width: 8.33%">{{url.id}}</td>
+                                <td style="width: 25%"><a target="_blank" [href]="url.url" (click)="updateUrlCounter(url.id)">{{url.shortUrl}}</a></td>
+                                <td style="width: 50%">{{url.url}}</td>
+                                <td style="width: 16.66%">{{url.counter}}</td>
+                                <!-- <td>
+                                    <button [routerLink]="['/user-edit',user.id]" class="btn btn-primary btn-sm mr-2">Edit</button>
+                                    <button class="btn btn-danger btn-sm mr-2" (click)="deleteData(user.id)">Delete</button>
+                                   
+                                </td> -->
+                            </tr>
+                            </tbody>
+
+                    </table>
+                    </div>
+        </div>

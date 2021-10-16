@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row d-flex flex-row justify-content-between">
+    <div class="card col-xl-12 " >
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <tr>
+                        <td>
+                            <ngx-charts-bar-vertical [results]="graph"
+                            [view]="view"
+                            
+                            [showXAxisLabel]="showXAxisLabel"
+                            [showYAxisLabel]="showYAxisLabel"
+                            [xAxis]="xAxis"
+                            [yAxis]="yAxis"
+                            [xAxisLabel]="xAxisLabel"
+                            [yAxisLabel]="yAxisLabel">
+                            </ngx-charts-bar-vertical>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="card col-xl-4 ml-1 mb-3"  >
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <tr>
+                        <td>
+                            <ngx-charts-pie-chart [results]="graph"
+                            [view]="view2"
+                            [scheme]="colorScheme"
+                            [gradient]="gradient2"
+                            [legendPosition]="legendPosition2"
+                            [legend]="showLegend"
+                           
+                            >
+                            </ngx-charts-pie-chart>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div> -->
+    </div>
+</div>

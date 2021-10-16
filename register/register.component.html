@@ -1,0 +1,46 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+  
+      <!-- Icon -->
+      <div [ngClass]="'fadeIn first'">
+        <img src="assets/icon2.svg" id="icon" alt="User Icon" />
+        <span class="material-icons-outlined">
+            manage_accounts
+            </span>
+        <i class="fas fa-user-graduate"></i>
+      </div>
+  
+      <!-- Login Form -->
+      <form [formGroup]="userForm" (ngSubmit)="submitdata()">
+        <input type="text" [ngClass]="{ 
+          'has-error':userForm.controls.emailId.touched && userForm.controls.emailId.invalid,
+          'has-success' : userForm.controls.emailId.touched && userForm.controls.emailId.valid
+      }" placeholder="login" 
+        formControlName="emailId" class="form-control">
+        <input type="password"  [ngClass]="{ 
+          'has-passworderror':userForm.controls.password.touched && userForm.controls.password.invalid,
+          'has-passwordsuccess' : userForm.controls.password.touched && userForm.controls.password.valid
+      }"  placeholder="password"
+        formControlName="password" class="form-control">
+        <input type="password"  [ngClass]="{ 
+          'has-cnfpassworderror':userForm.controls.confirmpassword.touched && userForm.controls.confirmpassword.invalid,
+          'has-cnfpasswordsuccess' : userForm.controls.confirmpassword.touched && userForm.controls.confirmpassword.valid
+      }"  placeholder="password"
+        formControlName="confirmpassword" class="form-control">
+        <input type="date" [ngClass]="{ 
+          'has-doberror':userForm.controls.dob.touched && userForm.controls.dob.invalid,
+          'has-dobsuccess' : userForm.controls.dob.touched && userForm.controls.dob.valid
+      }" placeholder="login" 
+        formControlName="dob" class="form-control">
+        <input type="submit" [ngClass]="'fadeIn fourth'" value="Register" [disabled]="
+        userForm.controls.dob.invalid || userForm.controls.confirmpassword.invalid
+        || userForm.controls.password.invalid || userForm.controls.emailId.invalid
+        ">
+      </form>
+  
+      <!-- Remind Passowrd -->
+      
+  
+    </div>
+  </div>

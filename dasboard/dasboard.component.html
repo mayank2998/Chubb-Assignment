@@ -1,0 +1,45 @@
+<!-- Page Heading -->
+
+   
+<div id="layoutSidenav_content">
+<main>
+<div class="container" id="layoutSidenav_content">
+    <div class="row">
+        <!-- Earnings (Monthly) Card Example -->
+        <div routerLink="url-form" class="col-xl-4 col-md-4 mb-4">
+            <!-- <app-dashboard-card title="URL SHORTENER"></app-dashboard-card> -->
+            <div [ngClass]="'card-counter info'">
+                <i class="fas fa-link"></i>
+                <span [ngClass]="'count-numbers'">Short Url</span>
+                <span [ngClass]="'count-name'"></span>
+              </div>
+        </div>
+        <div [routerLink]="['/main/list-url']" class="col-xl-4 col-md-4 mb-4">
+            <!-- <app-dashboard-card title="URL LIST"></app-dashboard-card> -->
+            <div [ngClass]="'card-counter danger'">
+                <i class="fa fa-database"></i>
+                <span [ngClass]="'count-numbers'">URL List</span>
+                <span [ngClass]="'count-name'">{{urlCount}}</span>
+              </div>
+        </div>
+        <div [routerLink]="['/main/visualizer']" class="col-xl-4 col-md-4 mb-4">
+            <!-- <app-dashboard-card title="Mark your Attendance"></app-dashboard-card> -->
+            <div [ngClass]="'card-counter success'">
+                <i class="fas fa-chart-line"></i>
+                <span [ngClass]="'count-numbers'">Statistics</span>
+                <span [ngClass]="'count-name'">Max Click on a Url = {{maxClick}}</span>
+              </div>
+        </div>
+    </div>
+</div>
+</main>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xl-8 col-md-4"></div>
+            <app-visualizer></app-visualizer>
+    </div>
+</div>
+<div class="row">
+    <router-outlet></router-outlet>
+</div>
